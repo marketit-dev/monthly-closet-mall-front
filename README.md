@@ -7,3 +7,10 @@
 5. Adding a CSS Preprocessor Sass
 6. Adding MobX
 7. Adding Router
+
+### How to start
+```console
+$ npm install
+$ npm start
+```
+
