@@ -1,0 +1,24 @@
+.link-button {
+    background-color: $mid-grey;
+    border: 1px solid $dark-yello;
+    color: $dark-yello;
+    font-weight: normal !important;
+    border-radius:25px;
+    -webkit-border-radius:25px;
+    box-shadow:0 1px 2px #5e5d5b;
+    text-align: center;
+    line-height: 100%;
+    @include medium {    
+        width: 210px;
+        height: 50px;
+    }
+    @include large {
+        width:250px;
+        height:60px;
+    }
+}
+link:focus{
+    @include small {    
+        outline: none;
+    }
+}

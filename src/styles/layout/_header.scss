@@ -1,0 +1,19 @@
+.header {
+    height: $header-height;
+    background-color: none;
+    padding: 5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    a {
+        color: white;
+    }
+    a:hover {
+        border-color: white;
+        color: white;
+    }
+    a:link.title {
+        text-decoration: none;
+    }
+
+}

@@ -1,0 +1,81 @@
+$home-container-height: 400px;
+$home-container-large-height: 460px;
+.home-view {
+    .home-link-button {
+        margin: 30px 0px;
+    }
+    .home-main-container{
+        @include medium {    
+            height: $home-container-height;
+        }
+        @include large {
+            height: $home-container-large-height;
+        }     
+        padding-top: $header-height;
+        background-color: $mid-grey;
+        .home-main-content {
+            color: white;
+        }
+        .home-main-title{
+            @include medium {    
+                margin-bottom: 10px;
+            }
+            @include large {
+                margin-bottom:20px;
+            }       
+        }
+    }
+    .home-plan-container{
+        @include medium {    
+            height: $home-container-height;
+        }
+        @include large {
+            height: $home-container-large-height;
+        }             
+        .home-plan {
+            .plan-image{
+                @include medium {    
+                    width: 40px;
+                    height: 40px;
+                }
+                @include large {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+    .home-introduction-container{
+        @include medium {    
+            height: $home-container-height;
+        }
+        @include large {
+            height: $home-container-large-height;
+        }             background-color: $light-grey;
+        .font-h6 {
+            padding-bottom: 3vw;
+            font-weight: bold;
+        }
+    }
+    .home-style-container{
+        @include medium {    
+            height: $home-container-height;
+        }
+        @include large {
+            height: $home-container-large-height;
+        }             .font-h6 {
+            padding-bottom: 3vw;
+            font-weight: bold;
+        }
+        .style-image {
+            @include medium {    
+                width: 40px;
+                height: 40px;
+            }
+            @include large {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+}

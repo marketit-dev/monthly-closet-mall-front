@@ -1,0 +1,20 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+@import 'components/linkButton';
+
+@import 'layout/header';
+
+@import 'themes/font';
+
+@import 'pages/home';
+
+*:focus {
+    outline: none;
+}
+ul {
+    list-style:none;
+}
+.root-content {
+    width: 100%;
+}
