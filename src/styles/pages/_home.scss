@@ -1,10 +1,15 @@
-$home-container-height: 400px;
+$home-container-height: 300px;
 $home-container-large-height: 460px;
 .home-view {
     .home-link-button {
         margin: 30px 0px;
     }
     .home-main-container{
+        background-image: url("../../assets/main_header.png");   
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom right;
+        // background-size: 100% 100%;
         @include medium {    
             height: $home-container-height;
         }
@@ -26,55 +31,106 @@ $home-container-large-height: 460px;
         }
     }
     .home-plan-container{
+        background-color: white;
         @include medium {    
-            height: $home-container-height;
+            height: $home-container-height*3;
         }
         @include large {
             height: $home-container-large-height;
         }             
         .home-plan {
-            .plan-image{
+            .home-plan-text{
+                background-color: $light-grey;
+                padding: 15px 10px;
+            }
+            .plan-image-container{
                 @include medium {    
-                    width: 40px;
-                    height: 40px;
+                    width: 100%;
+                    height: 200px;
                 }
                 @include large {
-                    width: 120px;
-                    height: 120px;
+                    width: 100%;
+                    height: 200px;
+                }
+                .plan-image{
+                    @include medium {    
+                        max-width: 120px; max-height: 120px;
+                    }
+                    @include large {
+                        max-width: 120px; max-height: 120px;
+                    }
                 }
             }
         }
     }
-    .home-introduction-container{
+    .home-introduction-container {
+        background-color: rgb(237, 241, 242);
         @include medium {    
             height: $home-container-height;
         }
         @include large {
             height: $home-container-large-height;
-        }             background-color: $light-grey;
+        }
+        .home-introduction-image-container {
+            .introduction-image {
+                @include medium {    
+                    object-fit: cover;
+                    width: 130px;
+                    height: 160px;
+                }
+                @include large {
+                    object-fit: cover;
+                    width: 320px;
+                    height: 360px;
+                }
+            }
+        }
+        .home-introduction {
+            .home-introduction-inner{
+                padding:0px 20px;
+                border-left: 1px solid $mid-light-grey;
+                @include medium {    
+                    height: 160px;
+                }
+                @include large {
+                    height: 360px;
+                }
+            }
+            .font-body2 {
+                padding-bottom: 5px;
+            }
+            .font-h6 {
+                padding-bottom: 3vw;
+                font-weight: bold;
+            }
+        }
+    }
+    .home-introduction-container:nth-child(even) {
+        background-color: rgb(249, 249, 249) !important;
+    }
+    .home-style-title {
+        padding: 25px;
+    }
+    .home-style-container {
+        background-color: $light-grey;         
         .font-h6 {
             padding-bottom: 3vw;
             font-weight: bold;
         }
-    }
-    .home-style-container{
-        @include medium {    
-            height: $home-container-height;
-        }
-        @include large {
-            height: $home-container-large-height;
-        }             .font-h6 {
-            padding-bottom: 3vw;
-            font-weight: bold;
-        }
-        .style-image {
-            @include medium {    
-                width: 40px;
-                height: 40px;
-            }
-            @include large {
-                width: 180px;
-                height: 180px;
+        .home-style {
+            padding: 40px 40px;
+            .style-image {
+                border: 1px solid $mid-light-grey;
+                width: 100%;
+                height: auto;
+                // @include medium {    
+                //     width: 40px;
+                //     height: 40px;
+                // }
+                // @include large {
+                //     width: 180px;
+                //     height: 180px;
+                // }
             }
         }
     }

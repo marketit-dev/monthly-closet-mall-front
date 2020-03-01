@@ -35,7 +35,10 @@ $alarm-color: rgb(214, 78, 69) !default;
 
 /// Light grey
 /// @type Color
-$light-grey: rgb(215,216,217) !default;
+$mid-light-grey: rgb(215,216,217) !default;
+/// @type Color
+$light-grey: rgb(244,243,245) !default;
+
 $light-grey-trans: rgba(215, 216, 217, 0.8) !default;
 /// Medium grey
 /// @type Color
