@@ -7,6 +7,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Loading from './components/Loading';
 import NotFound from './components/NotFound';
+import Home from './pages/HomeView';
+
 import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import routes from './router';
@@ -41,6 +43,7 @@ class App extends Component {
                                         />
                                     );
                                 })}
+                                <Route path="/" component={Home} key="/" />
                                 <Route component={NotFound} />
                             </Switch>
                         </div>

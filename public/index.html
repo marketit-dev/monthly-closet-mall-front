@@ -29,6 +29,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!-- Thunder: Styles - <head> 태그 가장 끝 부분에 넣어주세요. -->
+    <link rel="stylesheet" href="https://code.clayful.io/clayful-thunder@1.2.1/theme/basic/style.min.css">
+    <!-- Thunder: NOTY - Styles -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/noty@3.2.0-beta/lib/noty.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/noty@3.2.0-beta/lib/themes/metroui.css">
     <title>월간 클로젯</title>
   </head>
   <body style="height: 100%">
@@ -44,5 +49,161 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  
+<!-- Thunder: Scripts - <body> 태그 가장 끝 부분에 넣어주세요. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.clayful.io/clayful-thunder@1.2.1/thunder.min.js"></script>
+  <script src="https://code.clayful.io/clayful-thunder@1.2.1/theme/basic/templates.min.js"></script>
+  <script src="https://code.clayful.io/clayful-thunder@1.2.1/locales/ko.js"></script>
+  <!-- Thunder: NOTY - Scripts -->
+  <script src="https://unpkg.com/noty@3.2.0-beta/lib/noty.js"></script>
+  <script src="https://code.clayful.io/clayful-thunder@1.2.1/plugins/notification/noty.min.js"></script>
+  <!-- Thunder: Daum - Scripts -->
+  <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+  <script src="https://code.clayful.io/clayful-thunder@1.2.1/plugins/searchAddress/daum.min.js"></script>
+  <!-- Thunder: Iamport - Scripts -->
+  <script src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+  <script src="https://code.clayful.io/clayful-thunder@1.2.1/plugins/makePayment/iamport.min.js"></script>
+  <script>
+        IMP.init('imp04101648');
+    Thunder({
+        client: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImUzNDNjNTE1ZTYwNDU0MDZhOWViOWUyMTBkZDc3NjdhY2E3MzU3NWNjNDE5ZjNkMzlmYTI3M2NhYjQyMGE5NDciLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNTgyNzg4MDAwLCJzdG9yZSI6IkFLVDQ0UzJLRFY2VS5YOUNBODhTTTJMRkciLCJzdWIiOiJBTFZWNkhMOEtCWVgifQ.0xNjQkMCjXWn_QyXmlISBkHMxaLTPBXbLQr3UrVPvgo',
+        header: false,
+        legal: {
+            orderPrivacy: {
+                link: null,
+                text: null
+            },
+            orderTerms: {
+                link: null,
+                text: null
+            },
+            registrationPrivacy: {
+                link: null,
+                text: null
+            },
+            registrationTerms: {
+                link: null,
+                text: null
+            }
+        },
+        productLabels: [
+            'unavailable',
+            'sold-out',
+            'discounted'
+        ],
+        productActions: [
+            'add-to-cart',
+            'buy-now'
+        ],
+        productOptionSelector: 'combined',
+        dateInputFormat: 'YYYY-MM-DD',
+        customerDashboardLogout: true,
+        customerIdentity: [
+            'name.full',
+            'alias',
+            'userId'
+        ],
+        customerRegistrationFields: [
+            'userId:required',
+            'email:required',
+            'password:required',
+            'name.full:required',
+            'mobile:required',
+            'gender',
+            'birthdate'
+        ],
+        customerUpdateFields: [
+            'userId',
+            'email',
+            'name.full:required',
+            'mobile:required',
+            'phone',
+            'birthdate',
+            'gender'
+        ],
+        customerOrderFields: [
+            'name.full:required',
+            'email:required',
+            'mobile:required',
+            'phone'
+        ],
+        recipientFields: [
+            'name.full:required',
+            'mobile:required',
+            'phone'
+        ],
+        socialApps: [],
+        orderAuthFields: [],
+        refundReasonCategories: [
+            {
+                label: 'refundReason:B9d15kgR6Sg',
+                shippingFee: {
+                    someItems: false,
+                    allItems: false
+                }
+            },
+            {
+                label: 'refundReason:5abdQOpv9Tw',
+                shippingFee: {
+                    someItems: false,
+                    allItems: true
+                }
+            }
+        ],
+        plugins: {
+            notification: ThunderNotificationNoty(),
+            searchAddress: ThunderSearchAddressDaum(),
+            makePayment: ThunderMakePaymentIamport()
+        },
+        addressDisabled: [
+            'country',
+            'state',
+            'city',
+            'address1',
+            'postcode'
+        ],
+        subscriptionPlans: [
+            {
+                id: '6Y38QURTKST2',
+                startsAt: 'datepicker',
+                time: '12:00'
+            }
+        ],
+        paymentMethods: {
+            subscription: [
+                {
+                    id: 'clayful-iamport',
+                    label: 'kakaoByCard',
+                    cardFields: false,
+                    meta: {
+                        pg: 'kakao',
+                        payMethod: 'card'
+                    }
+                },
+                {
+                    id: 'clayful-iamport',
+                    label: 'html5InicisByCard',
+                    cardFields: false,
+                    meta: {
+                        pg: 'html5_inicis',
+                        payMethod: 'card'
+                    }
+                }
+            ]
+        },
+        messages: {
+            'payment-form': {
+                kakaoByCard: '신용카드 (카카오페이)',
+                html5InicisByCard: '신용카드 (이니시스)'
+            },
+            'order-request-refund': {
+                'refundReason:B9d15kgR6Sg': '고객 변심',
+                'refundReason:5abdQOpv9Tw': '제품 하자'
+            }
+        }
+        
+    });
+  </script>
   </body>
 </html>
