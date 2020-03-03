@@ -1,0 +1,55 @@
+$plan-container-height: 350px;
+$plan-container-large-height: 520px;
+.plan-main-container {
+    padding-bottom: $header-height;
+    background-color: $mid-grey;
+    padding-top: $header-height;
+}
+.plan-info-container {
+    @include medium {    
+        height: $plan-container-height;
+    }
+    @include large {
+        height: $plan-container-large-height;
+    }
+    .plan-info-text {
+        padding: 15px;
+        background-color: $light-grey;
+    }
+    .plan-info-image-container {
+        .plan-info-image {
+            object-fit: contain;
+            @include medium {    
+                height: $plan-container-height;
+            }
+            @include large {
+                height: $plan-container-large-height;
+            }
+            padding: 30px 30px 0 0;
+        }
+    }
+}
+.plan-benefit-container {
+    padding: 50px 0px;
+    background-color: $sub-main-color;
+    .plan-benefit-title {
+        padding-bottom: 10px;
+        border-bottom: 2px solid $coming-soon-background-color;
+    }
+    .plan-benefit-text span{
+        padding-bottom: 15px;
+    }
+    .plan-benefit-image {
+        // object-fit: contain;
+        padding: 10px 0px;
+        @include medium {    
+            max-height: 100px;
+        }
+        @include large {
+            max-height: 250px;
+        }
+    }
+    .plan-coupon-container {
+        border-bottom: 2px solid $coming-soon-background-color;
+    }
+}

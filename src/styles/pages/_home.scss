@@ -64,7 +64,7 @@ $home-container-large-height: 460px;
         }
     }
     .home-introduction-container {
-        background-color: rgb(237, 241, 242);
+        background-color: $sub-main-color;
         @include medium {    
             height: $home-container-height;
         }
@@ -123,14 +123,6 @@ $home-container-large-height: 460px;
                 border: 1px solid $mid-light-grey;
                 width: 100%;
                 height: auto;
-                // @include medium {    
-                //     width: 40px;
-                //     height: 40px;
-                // }
-                // @include large {
-                //     width: 180px;
-                //     height: 180px;
-                // }
             }
         }
     }

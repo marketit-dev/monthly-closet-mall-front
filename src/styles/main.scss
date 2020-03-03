@@ -1,6 +1,8 @@
 @import 'utilities/variables';
 @import 'utilities/mixins';
 
+@import 'components/_planList';
+@import 'components/_planButton';
 @import 'components/linkButton';
 
 @import 'layout/header';
@@ -8,7 +10,7 @@
 @import 'themes/font';
 
 @import 'pages/home';
-
+@import 'pages/plan';
 *:focus {
     outline: none;
 }

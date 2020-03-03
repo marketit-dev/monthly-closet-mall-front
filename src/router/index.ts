@@ -11,7 +11,7 @@ const routes = [
         path: '/plan',
         name: 'PLAN',
         icon: 'nc-icon nc-bank',
-        component: () => import('../pages/HomeView'),
+        component: () => import('../pages/PlanView'),
         layout: '',
         subRoutes: [],
     },

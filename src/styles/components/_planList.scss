@@ -1,0 +1,89 @@
+$coming-soon-background-color: rgb(128, 131, 134);
+
+.plan-list-container  {
+    margin: 0px !important;
+    padding: 0px 40px;
+    .plan-item-wrapper {
+        background-color: $mid-grey;
+    }
+    .plan-item-container, .plan-comming-item-container{
+        // @include medium {    
+        //     max-height: 100px;
+        // }
+        // @include large {
+        //     max-height: 90px;
+        // }
+        @include medium {    
+            padding: 8px;
+        }
+        @include large {
+            padding: 20px;
+        }        
+        background-color: $sub-main-color;
+        .plan-item-title {
+            border-bottom: 2px solid $coming-soon-background-color;
+        }
+        .plan-item-image-container {
+            padding: 15px;
+            @include medium {    
+                height: 200px;
+            }
+            @include large {
+                height: 300px;
+            }
+            .plan-item-image {
+                @include medium {    
+                    max-height: 90px;
+                }
+                @include large {
+                    max-height: 120px;
+                }
+            }
+        }
+        .plan-item-desc {
+            padding: 5px;
+        }
+    }
+}
+.plan-comming-item-container {
+    background-color: $coming-soon-background-color !important;
+    .plan-item-title, .plan-item-desc {
+        color: $mid-grey;
+    }
+    .plan-item-image {
+        background-color: $coming-soon-background-color;
+    }
+    .plan-item-comming-container {
+        position: relative;
+        $plan-medium-width: 120px;
+        $plan-medium-height: 35px;
+        $plan-large-width: 220px;
+        $plan-large-height: 45px;
+
+        @include medium {    
+            width: 120px;
+            height: 35px;
+        }
+        @include large {
+            width:220px;
+            height:45px;
+        }
+        .plan-item-comming {
+            max-width: 300px;
+            background-color: none;
+            position: absolute;
+            @include medium {    
+                max-width: 200px;
+                bottom: -$plan-medium-height;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            @include large {
+                max-width: 300px;
+                bottom: -$plan-large-height;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.plan-buy-button {
+    background-color: rgb(246, 212, 104);
+    text-align: center;
+    line-height: 100%;
+    @include medium {    
+        width: 120px;
+        height: 35px;
+    }
+    @include large {
+        width:220px;
+        height:45px;
+    }
+}
